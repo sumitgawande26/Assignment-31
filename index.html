@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 31</title>
+    <style>
+        body {
+            background: rgb(208,66,114);
+background: linear-gradient(190deg, rgba(208,66,114,1) 16%, rgba(253,145,29,0.8604691876750701) 61%, rgba(252,69,156,1) 100%);
+
+
+            min-height: 100vh;
+        }
+
+        .app-title {
+            text-align: center;
+            color: #560464;
+            font-weight: bolder;
+            font-style: oblique;
+        }
+
+        #mainProductImage {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px #6b666b;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .product-Images-Container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-image {
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border: 1px solid #560464;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="app-title">Product Preview Design</h1>
+    <h2 class="app-title">Product Name - Vinata Bags</h2>
+    <img src="./img/1.jpg" id="mainProductImage" />
+    <div class="product-Images-Container">
+        <img src="./img/1.jpg" class="product-image" onclick="changeImage('./img/1.jpg')" />
+        <img src="./img/2.jpg" class="product-image" onclick="changeImage('./img/2.jpg')" />
+        <img src="./img/3.jpg" class="product-image" onclick="changeImage('./img/3.jpg')" />
+        <img src="./img/4.jpg" class="product-image" onclick="changeImage('./img/4.jpg')" />
+        <img src="./img/5.jpg" class="product-image" onclick="changeImage('./img/5.jpg')" />
+        <img src="./img/6.jpg" class="product-image" onclick="changeImage('./img/6.jpg')" />
+    </div>
+
+    <script>
+        function changeImage(imageName) {
+            const mainImg = document.getElementById('mainProductImage');
+            mainImg.src = imageName;
+
+        }
+    </script>
+</body>
+
+</html>
